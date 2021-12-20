@@ -1,0 +1,19 @@
+{
+  "name": "follow-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manavdoda7/follow-app.git"
+  },
+  "author": "Manav Doda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manavdoda7/follow-app/issues"
+  },
+  "homepage": "https://github.com/manavdoda7/follow-app#readme"
+}
