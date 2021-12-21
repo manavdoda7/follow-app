@@ -11,7 +11,7 @@ require('./middlewares/dbconnection')
 
 // For setting static routes for images CSS and in-browser JS
 app.set('view engine', 'ejs')
-app.use('/', express.static(__dirname + '/Public'))
+app.use('/', express.static(__dirname + '/public'))
 
 
 // For creating sessions
@@ -36,6 +36,7 @@ app.use('/', require('./routes/homeroute'))
 app.use('/login', require('./routes/login'))
 app.use('/register', require('./routes/register'))
 app.use('/home', require('./routes/home'))
+app.use('/user', require('./routes/userRoutes'))
 
 
 app.use((req, res)=>{

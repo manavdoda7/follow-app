@@ -10,14 +10,14 @@
     <div style="color: red;">
         <%-message%>
     </div>
-
+    <a href="/user/logout">Logout</a>
     <div style="border: 2px solid #000">
         Suggestions:
     </div>
 
     <div style="margin-top: 20px; border: 2px solid #000;">
         <span>Enter Username of user you want to follow: </span>
-        <form action="/follow" method="POST">
+        <form action="/user/follow" method="POST">
             <input type="text" name="username" placeholder="Enter username">
             <button type="submit">Follow</button>
         </form>

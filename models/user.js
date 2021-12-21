@@ -21,7 +21,9 @@ class User{
     static async follow(followed, followedBy) {
         return db.promise().query(`insert into follow values("${followed}", "${followedBy}")`)
     }
-
+    static async checkDuplicate(followed, followedBy) {
+        return db.promise().query(`select * from follow where followed = "${followed}" and followedBy="${followedBy}"`)
+    }
     static async fetchFollowing(username) {
         return db.promise().query(`select followed from follow where followedBy="${username}"`)
     }
