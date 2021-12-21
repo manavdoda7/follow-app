@@ -13,6 +13,14 @@
     <a href="/user/logout">Logout</a>
     <div style="border: 2px solid #000">
         Suggestions:
+        <ul>
+            <% for(i=0;i<suggestions.length;i++) { %>
+                <li style="position: relative;">
+                    <%-suggestions[i] %>
+                    <a href="/user/follow/<%-suggestions[i]%>" style="position: absolute; right: 0; padding-right: 10px;">Follow</a>
+                </li>
+            <% } %>
+        </ul>
     </div>
 
     <div style="margin-top: 20px; border: 2px solid #000;">
