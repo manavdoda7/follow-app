@@ -28,7 +28,10 @@
             Users who follow you(Followers):
             <ul>
                 <% for(i=0;i<followers.length;i++) { %>
-                    <li><%-followers[i].followedBy%></li>
+                    <li style="position: relative;">
+                        <%-followers[i].followedBy%> 
+                        <a style="position: absolute; right: 0; padding-right: 10px;" href="/user/removeFollower/<%-followers[i].followedBy%>">Remove</a>
+                    </li>
                 <%  } %>
             </ul>
         </div>
@@ -36,7 +39,10 @@
             Users whom you follow(Following):
             <ul>
                 <% for(i=0;i<following.length;i++) { %>
-                    <li><%-following[i].followed%></li>   
+                    <li style="position: relative;">
+                        <%-following[i].followed%>
+                        <a style="position: absolute; right: 0; padding-right: 10px;" href="/user/removeFollowing/<%-following[i].followed%>">Remove</a>
+                    </li>   
                 <% } %>
             </ul>
         </div>
